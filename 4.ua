@@ -3,21 +3,18 @@
 
 Parse ← ⊜∘⊸≠@\n
 
-Occurences ← /+♭≡◇⌕ ⊙¤
+Occurences ← ⧻⊚≡◇⌕⊙¤
 
-Masks₁ ← {
-  ◡∩⇌⊸≡¤"XMAS"
-  ⊸⇌⊸≡⇌⊸⇌[
-    "X\W\W\W"
-    "\WM\W\W"
-    "\W\WA\W"
-    "\W\W\WS"
-  ]
-}
+Rots ← ⍥₃⊸(⍉⇌)
+
+Masks₁ ← (
+  "XMAS"
+  ⊃(≡(⌝↻⊙$"_\W\W\W")°⊏|¤)
+  □₈ ∩Rots)
 
 P₁ ← Occurences Masks₁
 
-Masks₂ ← □₄ ◡∩⍉⊸⇌[
+Masks₂ ← □₄ Rots[
   "M\WM"
   "\WA\W"
   "S\WS"
