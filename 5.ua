@@ -3,24 +3,25 @@
 
 AoCGet 2024 5
 
-°□₂ ⊜□¬⊸⦷"\n\n"
+°$"_\n\n_"
 ⊙(⍜⊏⋅@|⊚⊸=@,)
 ≡°□ ∩(⊜(□⊜⋕⊸≠@|) ⊸≠@\n)
 
-Rules ←
-Plans ←
+Rules   ←
+Updates ←
 
-CheckRules ← ≡/↧ ⤸1_0 ⊞◇(/≥≡⬚W⊗⊙¤)
-SumMiddles ← /+≡◇(⊡⌊÷₂⊸⧻)
+IsValid ← /↧⧈₂(∈Rules)
+SumMids ← /+≡◇(⊡⌊÷₂⊸⧻)
 
-P₁ ← SumMiddles ▽⊸CheckRules
-
-Sort! ← ⊏⍖/+⊸⊞^0.
-
-P₂ ← (
-  (▽¬⊸CheckRules)
-  ⍚(Sort!(/↥⌕⊙Rules⊟))
-  SumMiddles
+P₁ ← (
+  ▽⊸≡◇IsValid
+  SumMids
 )
 
-⊃P₂P₁ Rules Plans
+P₂ ← (
+  ▽¬⊸≡◇IsValid
+  ⍚(⊏⍏⊸⊞(∈Rules⊟).)
+  SumMids
+)
+
+⊃P₂P₁ Updates
