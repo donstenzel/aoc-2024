@@ -1,11 +1,28 @@
 # Experimental!
 ~ "git: github.com/amatgil/steal-gift" ~ AoCGet
 
-Parse ← 
+Parse ← ≡⇌⍉⊜∘⊸≠@\n
 
-P₁ ← 
+S ← ⇌⍉≡⍣(
+  ⍩$"_^#_" °$"_^#_"
+| °$"_^_#_"
+  ⍩(:⊙⊸(/↧≡=@X)
+    ⨬($"__^#_" ⊙≡⋅@X
+    | $"_X_#_"))
+| ⍩$"_X_" ⊙≡⋅@X °$"_^_"
+| ∘)
 
-P₂ ← 
+Sim ← ⍥⍥₄S∞
+
+P₁ ← ⧻⊚⌕@X Sim
+
+InLoop ← ¬/↥[∩₄(∈:@X) ∩⊃⊣⊢⟜⍉]
+
+P₂ ← (
+  ⊚⌕@X⊃Sim¤
+  ≡(InLoop Sim ⍜⊡⋅@#)
+  -₁ ⧻⊚
+)
 
 AoCGet 2024 6
 Parse

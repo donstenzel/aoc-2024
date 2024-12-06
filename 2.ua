@@ -1,12 +1,13 @@
+# Experimental!
 ~ "git: github.com/amatgil/steal-gift" ~ AoCGet
 
 Parse ← ⊜(□⊜⋕⊸≠@\s)⊸≠@\n
 
-IsSafe ← ↧⊃(/↧=⊸⊢±|/↧↧⊃≤₃>₀⌵)≡/-◫₂
+IsSafe ← ×⊃(≍⊸↻₁±|/××⊃≤₃>₀⌵)⧈-
 
-P₁ ← /◇+⍚IsSafe
+P₁ ← ⧻⊚ ≡◇IsSafe
 
-P₂ ← /◇+⍚(/↥≡(IsSafe ⍜↘↘₁)⊙¤°⊏)
+P₂ ← ⧻⊚ ≡◇(/∨≡(IsSafe ⍜⊏⋅[])⊙¤°⊏)
 
 AoCGet 2024 2
 Parse
