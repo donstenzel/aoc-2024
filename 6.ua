@@ -20,7 +20,7 @@ InLoop ← ¬/↥[∩₄(∈:@X) ∩⊃⊣⊢⟜⍉]
 
 P₂ ← (
   ⊚⌕@X⊃Sim¤
-  ≡(InLoop Sim ⍜⊡⋅@#)
+  wait≡pool(InLoop Sim ⍜⊡⋅@#)
   -₁ ⧻⊚
 )
 

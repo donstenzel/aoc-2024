@@ -24,4 +24,5 @@ P₂ ← (
   SumMids
 )
 
-⊃P₂P₁ Updates
+Updates
+⊃P₂ P₁

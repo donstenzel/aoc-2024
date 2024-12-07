@@ -23,6 +23,5 @@ Masks₂ ← □₄ Rots[
 P₂ ← Occurences Masks₂
 
 AoCGet 2024 4
-
 Parse
 ⊃P₂ P₁
