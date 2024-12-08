@@ -4,6 +4,7 @@ Repr! ← (◇repr⊢)^!^0
 Sig!  ← (◇repr⋅⊢)^!^0
 
 Mean   ← ÷⧻⟜/+
+Median ← ÷₂/+⊏⊟⊃⌊⌈÷₂-₁⊸⧻⍆
 StdDev ← √⍜⌅Mean(ⁿ₂-) .
 
 # maps log₁₀₀₀ to prefix
@@ -25,11 +26,11 @@ FmtTime ← (
   $"__s"
 )
 
-# Time‼nF will print the mean time and standard
-# deviation of n repetitions of F
+# Time‼n𝔽 returns the mean, median and standard
+# deviation of n repetitions of 𝔽 in a displayable format
 Time‼ ← (
   ⍥(⊂⊙⍜now(◌◡{^1}))^0 []
-  ∩FmtTime ⊃Mean StdDev
+  ∩₃FmtTime ⊃(Mean|Median|StdDev)
   Repr!^1 ^0
   $"_ ×_"
   °⊟₃⍉≡$"─_─"
@@ -37,15 +38,20 @@ Time‼ ← (
   $$ │ ◷ │ _ │
   $$ ╰───┼─_─╯
   $$     ├╴x̄ _
+  $$     ├╴μ _
   $$     ╰╴σ _
 )
 
 ◷‼ ← Time‼^0^1
 
+# Times 5 repetitions of 𝔽
 T₅!   ← Time‼5^0
+# Times 10 repetitions of 𝔽
 T₁₀!  ← Time‼10^0
+# Times 50 repetitions of 𝔽
 T₅₀!  ← Time‼50^0
+# Times 100 repetitions of 𝔽
 T₁₀₀! ← Time‼100^0
 
-# layouts the result of Time‼.
-Image ← ⬚(÷₁₀₀ 14_16_23)layout {30 ∞_∞ ÷₁₀₀ 100_62_39}
+# layouts the result of Time‼
+Image ← ⬚(÷₁₀₀ 14_16_23) layout {30 ∞_∞ ÷₁₀₀ 100_62_39}
