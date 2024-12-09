@@ -1,9 +1,9 @@
 # Experimental!
 ~ "git: github.com/amatgil/steal-gift" ~ AoCGet
 
-Parse ← =⊃(▽⊸≠@.◴♭|¤|⧻) ⊜∘⊸≠@\n
+Parse ← =⌟⊃(▽⊸≠@.◴♭|⟜⧻) ⊜∘⊸≠@\n
 
-C ← ⧻◴▽≡/××⤚⊃≥₀>
+C ← ⧻⊚≡/××⊃≥₀>◴
 
 P₁ ← C /◇⊂ ⍚(≡(-⊃/-⊢) ⧅₂≠⊚)
 

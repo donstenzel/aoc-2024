@@ -27,7 +27,8 @@ FmtTime ← (
 )
 
 # Time‼n𝔽 returns the mean, median and standard
-# deviation of n repetitions of 𝔽 in a displayable format
+# deviation of n repetitions of 𝔽 in a displayable format.
+# Also returns the inputs to the function.
 Time‼ ← (
   ⍥(⊂⊙⍜now(◌◡{^1}))^0 []
   ∩₃FmtTime ⊃(Mean|Median|StdDev)
@@ -44,6 +45,8 @@ Time‼ ← (
 
 ◷‼ ← Time‼^0^1
 
+# Times a single repetition of 𝔽
+T! ← Time!!1^0
 # Times 5 repetitions of 𝔽
 T₅!   ← Time‼5^0
 # Times 10 repetitions of 𝔽
