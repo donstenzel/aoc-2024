@@ -46,15 +46,29 @@ Time‼ ← (
 ◷‼ ← Time‼^0^1
 
 # Times a single repetition of 𝔽
-T! ← Time!!1^0
+T! ← Time‼1^0
 # Times 5 repetitions of 𝔽
-T₅!   ← Time‼5^0
+T₅! ← Time‼5^0
 # Times 10 repetitions of 𝔽
-T₁₀!  ← Time‼10^0
+T₁₀! ← Time‼10^0
 # Times 50 repetitions of 𝔽
-T₅₀!  ← Time‼50^0
+T₅₀! ← Time‼50^0
 # Times 100 repetitions of 𝔽
 T₁₀₀! ← Time‼100^0
 
 # layouts the result of Time‼
 Image ← ⬚(÷₁₀₀ 14_16_23) layout {30 ∞_∞ ÷₁₀₀ 100_62_39}
+
+Profile! ←^ (
+  ◠(°⊟₃⍉≡$"─_─" $"_ _")°□₂
+  $$ [⍥(⍜now(◌{_})_)].
+  $$ ∩₃FmtTime ⊃(Mean|Median|StdDev)
+  $$ ⤙⊙⊙⊙◌
+  $$ $$ ╭───┬─_─╮
+  $$ $$ │ ◷ │ _ │
+  $$ $$ ╰───┼─_─╯
+  $$ $$     ├╴⍥ \_
+  $$ $$     ├╴x̄ \_
+  $$ $$     ├╴μ \_
+  $$ $$     ╰╴σ \_
+)

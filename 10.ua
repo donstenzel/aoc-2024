@@ -1,12 +1,15 @@
 # Experimental!
 ~ "git: github.com/amatgil/steal-gift" ~ AoCGet
 
-Parse ← 
+Parse ← ⊜(-@0)⊸≠@\n
 
-P₁ ← 
+N  ← ⊂⊃+-⊟⊸⇌⋯2¤
+F  ← ⊙◌ astar(▽=⊃(+₁⊡|⤚⬚∞⊡N)|=₉⊡)
+P! ← /+≡(^0 F) ⊚=0 ⟜¤ Parse
 
-P₂ ← 
+P₁ ← P!(⧻◴⍚⊣)
+
+P₂ ← P!⧻
 
 AoCGet 2024 10
-Parse
 ⊃P₂ P₁
