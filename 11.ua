@@ -6,7 +6,7 @@ I ← AoCGet 2024 11
 Op ← memo⍣(1 °0|⋕[⊃↙↘] ÷₂⊸⧻°⋕|×₂₀₂₄)
 
 ┌─╴Sol₁
-  Stones  ← °▽ ⊜⋕⊸≠@\s I
+  Stones  ← :°▽ ⊜⋕⊸≠@\s I
   Advance ← (⊙⊕/+ ◴⟜⊛ ⊙▽ /◇⊂⟜≡◇⧻ ⍚Op)
   P       ← ⋅/+ ⍥Advance ⊙Stones
   P₁      ← (P 25)

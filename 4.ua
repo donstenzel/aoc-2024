@@ -9,7 +9,7 @@ Rots ← ⍥₃⊸(⍉⇌)
 
 Masks₁ ← (
   "XMAS"
-  ≡(⌝↻⊙$"_\W\W\W")⊃°⊏¤
+  ≡(⌝↻⊙$"_\W\W\W") ⊃°⊏¤
   □₈ ∩Rots)
 
 P₁ ← Occurences Masks₁
