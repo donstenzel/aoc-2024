@@ -1,7 +1,8 @@
 # Experimental!
 ~ "git: github.com/amatgil/steal-gift" ~ AoCGet
+~ "lib" ~ L!
 
-Parse ← ≡⇌⍉⊜∘⊸≠@\n
+Parse ← ≡⇌⍉ L!∘
 
 S ← ⇌⍉≡⍣(
   ⍩$"_^#_" °$"_^#_"

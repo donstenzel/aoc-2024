@@ -1,8 +1,8 @@
 # Experimental!
 ~ "git: github.com/amatgil/steal-gift" ~ AoCGet
-~ "lib" ~ Adj₄
+~ "lib" ~ Adj₄ L!
 
-P‼ ← /+×⊜⊃⧻^0 -@@ ^1 ⊜∘⊸≠@\n
+P‼ ← /+×⊜⊃⧻^0 -@@ ^1 L!∘
 
 P₁ ← P‼(/+|⟜(/+≠⌟⊸≡⌟⬚@\0↻Adj₄))
 

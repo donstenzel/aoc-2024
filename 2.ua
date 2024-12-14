@@ -1,7 +1,8 @@
 # Experimental!
 ~ "git: github.com/amatgil/steal-gift" ~ AoCGet
+~ "lib" ~ Ints L!
 
-Parse ← ⊜(□⊜⋕⊸≠@\s)⊸≠@\n
+Parse ← L!(□Ints)
 
 IsSafe ← ×⊃(≍⊸↻₁±|/××⊃≤₃>₀⌵)⧈-
 

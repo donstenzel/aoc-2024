@@ -1,15 +1,15 @@
 # Experimental!
 ~ "git: github.com/amatgil/steal-gift" ~ AoCGet
+~ "lib" ~ Ints P!
 
-Group ← ⊃↙₂⊣ ↯3_2 ⊜⋕×⊃≥₀≤₉⊸-@0
-Parse ← ⊜Group¬⊸⦷"\n\n"
+Parse ← P!(⊃↙₂⊣ ↯3_2 Ints)
 Det   ← /-/×⍜⊢⇌
 Inv   ← ÷⊃Det⍜♭(⍜⊏¯ 1_2 ⍜⊏⇌ 0_3)
 
 P₁ ← (
   ≡(/+×Inv)
   ▽≡/×⊸=⊃⁅⁅₂
-  ⧻⊚×¤3_1
+  ⧻⊚×⌞3_1
 )
 
 P₂ ← P₁ ⊙(+1e13)

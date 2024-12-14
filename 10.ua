@@ -1,9 +1,9 @@
 # Experimental!
 ~ "git: github.com/amatgil/steal-gift" ~ AoCGet
-~ "lib" ~ Adj₄
+~ "lib" ~ Adj₄ L!
 
 F  ← ⊙◌ path(▽=⊃(+₁⊡|⤚⬚∞⊡+⌟Adj₄)|=₉⊡)
-P! ← /+≡(^0 F) ⊚=₀ ⟜¤ ⊜(-@0)⊸≠@\n
+P! ← /+≡(^0 F) ⊚=₀ ⟜¤ L!(-@0)
 
 P₁ ← P!(⧻◴⍚⊣)
 

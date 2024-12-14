@@ -1,11 +1,11 @@
 # Experimental!
 ~ "git: github.com/amatgil/steal-gift" ~ AoCGet
+~ "lib" ~ Ints L!
 
 AoCGet 2024 5
 
 °$"_\n\n_"
-⊙(⍜⊏⋅@|⊚⊸=@,)
-≡°□ ∩(⊜(□⊜⋕⊸≠@|)⊸≠@\n)
+≡°□ ∩L!(□Ints)
 
 Rules   ←
 Updates ←
