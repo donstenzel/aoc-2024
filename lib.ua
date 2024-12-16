@@ -11,6 +11,9 @@ L! ← ⊜^0⊸≠@\n
 # apply F to each paragraph
 P! ← ⊜^0¬⊸⦷"\n\n"
 
+# extracts integers from given text. they
+# can be seperated by anything other than `-`
+# ints ? text
 Ints ← ⊜⋕⊸∈"-0123456789"
 
 Mean   ← ÷⧻⟜/+
@@ -60,6 +63,8 @@ StdDev ← √⍜⌅Mean(ⁿ₂-) .
   )
 └─╴
 
+# \\25f7
+# 
 # Expects a function pack with 2 functions.
 # The first function is to be timed,
 # while the second represents the input.

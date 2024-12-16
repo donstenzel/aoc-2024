@@ -5,10 +5,8 @@
 Parse ← L!(⊃↘↙2 Ints)
 
 P₁ ← (
-  +×₁₀₀
-  ±-⌊⊃÷₂◿¤:
-  ▽⌵⊸≡/×
-  /×°⊚⊛
+  ±-⌊⊃÷₂ ◿⌞:+×₁₀₀
+  /×°⊚⊛ ▽⌵⊸≡/×
 )
 
 # seconds ? velocities positions width_height
