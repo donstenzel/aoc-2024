@@ -2,21 +2,19 @@
 ~ "git: github.com/amatgil/steal-gift" ~ AoCGet
 L ~ "lib" ~ Ints
 
-$ Register A: 24847151
-$ Register B: 0
-$ Register C: 0
-$ 
-$ Program: 2,4,1,5,7,5,1,6,0,3,4,0,5,5,3,0
+I ← $ Register A: 24847151
+    $ Register B: 0
+    $ Register C: 0
+    $ 
+    $ Program: 2,4,1,5,7,5,1,6,0,3,4,0,5,5,3,0
 
-∩Ints °$"_\n\n_"
-Regs    ←
-Program ←
+Parse ← ∩Ints °$"_\n\n_"
 
 A ← ⊡₀
 B ← ⊡₁
 C ← ⊡₂
 
-Combo ← ⨬∘(⊡-₄)⊸>₃
+Combo ← ◿₈⨬∘(⊡-₄)⊸>₃
 Div   ← ⍜⊙⋯↘⊃Combo⋅⊡₀
 Xor   ← ⍜⋯/≠⊟
 Instr ← °⊟↙₂⋅⋅↻
@@ -24,20 +22,21 @@ Instr ← °⊟↙₂⋅⋅↻
 Op ← ⨬(
   ⍜A◌⤙Div
 | ⍜B◌⤙(Xor ⊙B)
-| ⍜B◌⤙(◿₈Combo)
+| ⍜B◌⤙Combo
 | ⨬⋅⊙⊙∘⊃⋅⊙∘-₂ ±◡⋅A
 | ⍜B◌⤙(Xor ⋅⊃B C)
-| ⊃⋅∘(⊂◿₈Combo)
+| ⊃⋅∘(⊂Combo)
 | ⍜B◌⤙Div
 | ⍜C◌⤙Div
 )
 
-Exec ← ⇌ ⋅⊙⋅◌ ⍢(⊙⊙+₂ Op °⊟↙₂◡⋅⋅↻)⋅⋅(>⊙⧻)
+Exec ← ⇌ ⋅⊙⋅◌ ⍢(⊙⊙+₂ Op °⊟↙₂◡⋅⋅↻)⋅⋅(>⊙⧻) ⊙([] 0)
 
-P₁ ← /$"_,_" Exec Regs [] 0 Program
+P₁ ← /$"_,_" Exec
 
-R ← Exec ⇌⊂0_0 ⊙([] 0)
+R ← Exec ⇌[0 0 ∘]
 
-P₂ ← ⊙◌/↧⍥(▽⊸⤚≡(±⊣⦷⊸R) ♭⊞+⇡8×₈)⧻⤙∩¤ 0 Program
+P₂ ← ⊙◌ /↧ ⍥(▽⊸⤚≡(±⊣⦷⊸R) ♭⊞+⇡8×₈)⧻⤙∩¤ 0
 
-P₂ P₁
+Parse I
+⊃⋅P₂ P₁
