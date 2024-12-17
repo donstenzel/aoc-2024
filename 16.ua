@@ -3,7 +3,7 @@
 ~ "lib" ~ Adj₄ L!
 
 Parse ← L!∘
-Start ← ⊂₀ ⊢⊚⊸⌕@S
+Start ← ⊂₀⊢⊚⌕@S
 Goal  ← ≍@E⊡↘₁
 
 Next₁ ← (
@@ -23,9 +23,15 @@ Next₂ ← (
     | ⊟∩⌟(⊂◿₄)⊃+₁+₃))
   ↙⊙1_1e3_1e3¯⊸⧻)
 
-P ← path(Next₁|Goal) Start Parse
+Both ← ⧻◴ ≡↘₁ /◇⊂ path(Next₁|Goal)⊸Start Parse
 
-Both ← ⧻◴≡↘₁/◇⊂P
+Input ← Start. Parse AoCGet 2024 16
 
-AoCGet 2024 16
-Both
+Path!  ← ⧻◴≡↘₁/◇⊂ path(^0|Goal)
+First  ← Path!Next₁
+Second ← Path!Next₂
+~ "lib" ~ ◷‼
+# 200ms
+&p ◷‼(First|Input) 10
+# ~500ms
+&p ◷‼(Second|Input) 10

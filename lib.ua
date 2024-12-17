@@ -48,7 +48,7 @@ StdDev ← √⍜⌅Mean(ⁿ₂-) .
   # while the second represents the input.
   # The resulting function takes the amount
   # of repetitions to run.
-  Profile! ←^ (
+  Profile‼ ←^ (
     ◠(°⊟₃⍉≡$"─_─" $"_ _")°□₂
     $$ [⍥(⍜now(◌{_})_)].
     $$ ∩₃FmtTime ⊃(Mean|Median|StdDev)
@@ -63,11 +63,9 @@ StdDev ← √⍜⌅Mean(ⁿ₂-) .
   )
 └─╴
 
-# \\25f7
-# 
 # Expects a function pack with 2 functions.
 # The first function is to be timed,
 # while the second represents the input.
 # The resulting function takes the amount
 # of repetitions to run.
-◷! ←^ °{°$"Time~Profile!(_|_)"}
+◷‼ ← Time~Profile!!^0^1
