@@ -17,7 +17,6 @@ C ← ⊡₂
 Combo ← ◿₈⨬∘(⊡-₄)⊸>₃
 Div   ← ⍜⊙⋯↘⊃Combo⋅⊡₀
 Xor   ← ⍜⋯/≠⊟
-Instr ← °⊟↙₂⋅⋅↻
 
 Op ← ⨬(
   ⍜A◌⤙Div

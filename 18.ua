@@ -18,4 +18,4 @@ P₂ ← (
 
 AoCGet 2024 18
 Parse
-⊃P₂P₁
+⊃P₂ P₁
