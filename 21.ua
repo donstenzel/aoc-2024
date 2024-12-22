@@ -2,13 +2,12 @@
 M   ← map:⊓/⊂♭°⊡
 Num ← M["789" "456" "123" " 0A"]
 Dir ← M[" ^A" "<v>"]
-DtA ← map">v<^"A₂
 
 H ← ▽⊙⨬@<@>⟜>₀
 V ← ▽⊙⨬@^@v⟜>₀
 W ← ⊟⟜⇌⊂⊓V H°⊟
 
-Safe! ← ¬∊+⌟\+get:DtA ⊙⊙(get@ ^0)
+Safe! ← ¬∊+⌟\+⊏⊗⊙(">v<^"A₂|get@ ^0)
 Next! ← ⧈₂memo(
   get:^0      # get positions
   W ⊃/-⊢      # get ways and start
