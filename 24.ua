@@ -2,6 +2,7 @@
 ~ "git: github.com/amatgil/steal-gift" ~ AoCGet
 
 AoCGet 2024 24
+
 °$"_\n\n_"
 ∩(⊜□⊸≠@\n)
 ⊓(map⊙⋕⍚°$"_: _"
@@ -22,12 +23,13 @@ Process ← (
   insert ⊙⨬(↧|↥|≠)
 )
 
+# ready means both operands have values
 KeepReady ← ▽◡≡⌟(/× has □₂⊃L R)
 
 P₁ ← (
-  ⊙(⍜⍉⍜⊡₁⊗|{"AND" "OR" "XOR"})
-  ⊙◌ ⍥⊸(∧Process KeepReady:)∞
-  °⋯⊏⍏ ∩⌞▽⊸≡◇(=@z⊢) °map
+  ⊙(⍜⍉⍜⊡₁⊗|{"AND" "OR" "XOR"}) # convert ops into indices
+  ⊙◌ ⍥⊸(∧Process KeepReady:)∞ # propagate values
+  °⋯⊏⍏ ∩⌞▽⊸≡◇(=@z⊢) °map # turn sorted z bits into num
 )
 
 # Full Adder Circuit
@@ -39,41 +41,30 @@ P₁ ← (
 # G₃:  V₀  XOR  C₀  →  Sum
 # G₄:  V₁  OR   V₂  →  C₁
 
-# output bits can only come from XORs
-# except last
 M₁ ← /×[⊃(
-  | ¬≍End Out
-  | ¬≍"XOR"Op
-  | ∊⊓Out@z
+  | ∊⊓Out@z   # output bits can only
+  | ¬≍"XOR"Op # come from XORs
+  | ¬≍End Out # ignore last
   )]
 
-# XORs must involve at least one
-# input or output bit
-M₂ ← /×[⊃(
-  | ≍"XOR"Op
-  | ¬/↥∊"xyz"Out
-  | ¬/↥∊"xyz"L
-  | ¬/↥∊"xyz"R
-  )]
+M₂ ← ×⊃(
+| ≍"XOR"Op     # XORs must involve at least one
+| [⊃(Out|L|R)] # input or output bit
+  /×≡(¬/↥∊"xyz")
+)
 
-M₃ ← ↥⊃(
-  # result of AND must go to OR
-  # except initial
-| /×[⊃(
-    | ↥∩⌞≍⊓(Out|⊃L R)
-    | ×⊓(≍"AND"|¬≍"OR")∩Op
-    | ¬↥∩⌞≍"x00" ⊃L R
-    )]
-  # result of XOR cannot go to OR
-| /×[⊃(
-    | ↥∩⌞≍⊓(Out|⊃L R)
-    | ×⊓(≍"XOR"|≍"OR")∩Op
-    )]
+M₃ ← ↥∩⌞×⊃(
+| ↥∩⌞≍⊓(Out|⊃L R) # must be correlated
+| ×⊃(
+  | ×⊓(≍"AND"|¬≍"OR")∩Op # result of AND must go to OR
+  | ¬↥∩⌞≍"x00" ⊃L R      # ignore initial
+  )
+| ×⊓(≍"XOR"|≍"OR")∩Op # result of XOR cannot go to OR
 )
 
 P₂ ← (
-  ▽/↥⊸[⊃(≡M₁|≡M₂|≡/↥⊞M₃.)]
-  /$"_,_"⍆≡Out
+  ▽/↥⊸[⊃(≡M₁|≡M₂|≡/↥⊞M₃.)] # mask and keep sussy wires
+  /$"_,_"⍆≡Out             # sort and format
 )
 
 Inputs Wires
